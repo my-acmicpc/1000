@@ -6,7 +6,7 @@ fn main() {
     let result = line
         .trim()
         .split(' ')
-        .flat_map(|x| x.parse::<i32>())
+        .flat_map(&str::parse::<i32>)
         .fold(0, |acc, curr| acc + curr);
 
     println!("{}", result);
